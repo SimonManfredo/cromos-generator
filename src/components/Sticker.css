@@ -1,0 +1,215 @@
+.sticker {
+  position: relative;
+  width: 180px;
+  height: 260px;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow:
+    0 4px 15px rgba(0,0,0,0.35),
+    0 1px 3px rgba(0,0,0,0.2),
+    inset 0 1px 0 rgba(255,255,255,0.3);
+  background: #fff;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  flex-shrink: 0;
+}
+
+.sticker:hover {
+  transform: translateY(-6px) scale(1.04) rotate(-1deg);
+  box-shadow:
+    0 12px 30px rgba(0,0,0,0.45),
+    0 4px 8px rgba(0,0,0,0.2);
+}
+
+.sticker-shine {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0.35) 0%,
+    transparent 40%,
+    transparent 60%,
+    rgba(255,255,255,0.08) 100%
+  );
+  pointer-events: none;
+  z-index: 10;
+  border-radius: 14px;
+}
+
+.sticker-header {
+  background: linear-gradient(90deg, #1a1a2e 0%, #16213e 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 8px;
+}
+
+.sticker-competition {
+  font-size: 6px;
+  font-weight: 800;
+  color: #FFD700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-family: 'Arial Black', sans-serif;
+}
+
+.sticker-number {
+  font-size: 8px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.6);
+}
+
+.sticker-photo-area {
+  position: relative;
+  height: 165px;
+  overflow: hidden;
+}
+
+.photo-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.player-initials {
+  font-size: 52px;
+  font-weight: 900;
+  color: rgba(255,255,255,0.9);
+  font-family: 'Arial Black', sans-serif;
+  text-shadow: 2px 3px 8px rgba(0,0,0,0.4);
+  letter-spacing: -2px;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.shirt-number-bg {
+  background: rgba(0,0,0,0.25);
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+}
+
+.shirt-number {
+  font-size: 16px;
+  font-weight: 900;
+  color: #fff;
+  font-family: 'Arial Black', sans-serif;
+}
+
+.position-badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  color: #fff;
+  font-size: 8px;
+  font-weight: 900;
+  padding: 3px 6px;
+  border-radius: 4px;
+  font-family: 'Arial Black', sans-serif;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.rating-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  color: #1a1a1a;
+  font-size: 11px;
+  font-weight: 900;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Arial Black', sans-serif;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+.sticker-footer {
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 72px;
+  position: relative;
+}
+
+.team-flag {
+  font-size: 22px;
+  flex-shrink: 0;
+}
+
+.player-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.player-name {
+  font-size: 11px;
+  font-weight: 900;
+  color: #fff;
+  font-family: 'Arial Black', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.team-name {
+  font-size: 8px;
+  color: rgba(255,255,255,0.8);
+  font-weight: 600;
+  margin-top: 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.group-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(0,0,0,0.3);
+  border-radius: 6px;
+  padding: 3px 5px;
+  flex-shrink: 0;
+  backdrop-filter: blur(4px);
+}
+
+.group-label {
+  font-size: 5px;
+  color: rgba(255,255,255,0.7);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.group-letter {
+  font-size: 13px;
+  font-weight: 900;
+  color: #FFD700;
+  font-family: 'Arial Black', sans-serif;
+  line-height: 1;
+}
+
+.sticker-panini-logo {
+  position: absolute;
+  bottom: 4px;
+  right: 8px;
+  font-size: 6px;
+  font-weight: 900;
+  color: rgba(255,255,255,0.45);
+  letter-spacing: 2px;
+  font-family: 'Arial Black', sans-serif;
+  text-transform: uppercase;
+}

@@ -1,0 +1,362 @@
+/* ═══════════════════════════════════════
+   MOBILE-FIRST — base styles for phones
+═══════════════════════════════════════ */
+
+.creator-page {
+  padding: 16px;
+  max-width: 1060px;
+  margin: 0 auto;
+}
+
+/* ── Layout: mobile = single column, preview on top ── */
+.creator-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Preview comes first on mobile */
+.creator-preview { order: -1; }
+.creator-form    { order:  1; }
+
+/* ── Preview ── */
+.creator-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.preview-label {
+  font-size: 10px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.28);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.preview-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  max-width: 260px;
+}
+
+.photo-drag-hint {
+  font-size: 11px;
+  color: rgba(255,255,255,0.35);
+  text-align: center;
+  margin: 0;
+}
+
+/* ── Form ── */
+.creator-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-section {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.form-section-title {
+  font-size: 11px;
+  font-weight: 700;
+  color: #FFD700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  margin: 0;
+}
+
+/* ── Photo upload ── */
+.photo-zone {
+  border: 2px dashed rgba(255,255,255,0.18);
+  border-radius: 10px;
+  min-height: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  overflow: hidden;
+}
+
+.photo-zone:active,
+.photo-zone.drag-over {
+  border-color: #FFD700;
+  background: rgba(255,215,0,0.05);
+}
+
+.photo-zone.has-photo {
+  border-style: solid;
+  border-color: rgba(255,255,255,0.1);
+  min-height: 160px;
+}
+
+.photo-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.upload-icon { font-size: 28px; opacity: 0.4; }
+.upload-text { font-size: 14px; color: rgba(255,255,255,0.55); font-weight: 600; }
+.upload-sub  { font-size: 11px; color: rgba(255,255,255,0.25); }
+
+.form-tip {
+  font-size: 11px;
+  color: rgba(255,255,255,0.4);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ── Fields ── */
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field-group label {
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.42);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.label-hint {
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+  color: rgba(255,255,255,0.25);
+}
+
+/* iOS prevents zoom on inputs with font-size < 16px */
+.field-group input[type="text"],
+.field-group input[type="number"],
+.field-group select {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 10px;
+  padding: 12px 14px;
+  color: #fff;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.2s;
+  width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+  min-height: 48px;
+}
+
+.field-group input:focus,
+.field-group select:focus { border-color: #FFD700; }
+.field-group select option { background: #1a1a2e; color: #fff; }
+
+.field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+/* ── Sport selector ── */
+.sport-selector {
+  display: flex;
+  gap: 10px;
+}
+
+.sport-btn {
+  flex: 1;
+  padding: 12px 10px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.55);
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  min-height: 48px;
+}
+
+.sport-btn:active { opacity: 0.7; }
+
+.sport-btn.active {
+  background: rgba(255,215,0,0.15);
+  border-color: rgba(255,215,0,0.4);
+  color: #FFD700;
+  font-weight: 700;
+}
+
+/* ── Color pickers ── */
+.color-pickers-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.color-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.color-picker-full {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 3px;
+  background: rgba(255,255,255,0.06);
+  flex-shrink: 0;
+}
+
+.color-picker-full::-webkit-color-swatch-wrapper { padding: 0; }
+.color-picker-full::-webkit-color-swatch { border-radius: 7px; border: none; }
+
+.color-hex-val {
+  font-size: 13px;
+  color: rgba(255,255,255,0.35);
+  font-family: monospace;
+  flex: 1;
+}
+
+/* ── Buttons ── */
+.btn-download {
+  background: linear-gradient(90deg, #FFD700, #FFA500);
+  color: #1a1a1a;
+  border: none;
+  padding: 16px 24px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.2s;
+  width: 100%;
+  min-height: 52px;
+}
+
+.btn-download:active:not(:disabled) { opacity: 0.85; transform: scale(0.98); }
+.btn-download:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.btn-ghost {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.1);
+  color: rgba(255,255,255,0.35);
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s;
+  align-self: flex-start;
+  min-height: 44px;
+}
+
+.btn-ghost:active {
+  border-color: rgba(255,255,255,0.25);
+  color: rgba(255,255,255,0.65);
+}
+
+.btn-tiny {
+  font-size: 11px !important;
+  padding: 6px 12px !important;
+  min-height: 36px !important;
+}
+
+.reset-btn { align-self: flex-start; }
+
+/* ── Removing overlay ── */
+.removing-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  backdrop-filter: blur(4px);
+  z-index: 50;
+}
+
+.removing-spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid rgba(255,255,255,0.2);
+  border-top-color: #FFD700;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ═══════════════════════════════════════
+   TABLET  ≥ 600px
+═══════════════════════════════════════ */
+@media (min-width: 600px) {
+  .creator-page { padding: 20px; }
+
+  .photo-zone.has-photo { min-height: 180px; }
+
+  .preview-actions { max-width: 280px; }
+}
+
+/* ═══════════════════════════════════════
+   DESKTOP  ≥ 860px
+═══════════════════════════════════════ */
+@media (min-width: 860px) {
+  .creator-page { padding: 32px; }
+
+  .creator-layout {
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    gap: 44px;
+    align-items: start;
+  }
+
+  /* Restore natural DOM order on desktop */
+  .creator-preview {
+    order: 1;
+    position: sticky;
+    top: 24px;
+  }
+  .creator-form { order: 0; }
+
+  .field-group input[type="text"],
+  .field-group input[type="number"],
+  .field-group select {
+    font-size: 13px;
+    padding: 10px 12px;
+    min-height: 42px;
+  }
+
+  .btn-download {
+    font-size: 14px;
+    padding: 13px 24px;
+    min-height: 48px;
+  }
+
+  .btn-ghost { min-height: 38px; }
+}
